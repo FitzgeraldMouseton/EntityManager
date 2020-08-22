@@ -1,0 +1,10 @@
+
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(­çÏÆúÿÿÿÿ8Õ÷¤£º.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(åÑÒŒ
+P
+java:S1128	".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8Â÷¢º.
+b
+java:S1128"FRemove this unused import 'java.nio.file.attribute.DosFileAttributes'.(áºÅ8Â÷¢º.
+‰
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(óÅÿ8òØ‡¤º.

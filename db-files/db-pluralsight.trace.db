@@ -1,0 +1,286 @@
+08-22 14:21:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NAME" not found; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.table.Table.getColumn(Table.java:637)
+	at org.h2.command.Parser.parseColumn(Parser.java:849)
+	at org.h2.command.Parser.parseColumnList(Parser.java:833)
+	at org.h2.command.Parser.parseInsert(Parser.java:1033)
+	at org.h2.command.Parser.parsePrepared(Parser.java:402)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at reflection.metamodel.orm.EntityManagerImpl.prepareStatementWith(EntityManagerImpl.java:33)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:23)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:19)
+08-22 14:22:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "NAME" not found; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.table.Table.getColumn(Table.java:637)
+	at org.h2.command.Parser.parseColumn(Parser.java:849)
+	at org.h2.command.Parser.parseColumnList(Parser.java:833)
+	at org.h2.command.Parser.parseInsert(Parser.java:1033)
+	at org.h2.command.Parser.parsePrepared(Parser.java:402)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at reflection.metamodel.orm.EntityManagerImpl.prepareStatementWith(EntityManagerImpl.java:33)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:23)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:19)
+08-22 14:24:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Unknown data type: ; SQL statement:
+alter table person change NAM NAME [50004-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:3963)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:3826)
+	at org.h2.command.Parser.parseAlterTable(Parser.java:5354)
+	at org.h2.command.Parser.parseAlter(Parser.java:4689)
+	at org.h2.command.Parser.parsePrepared(Parser.java:333)
+	at org.h2.command.Parser.parse(Parser.java:306)
+	at org.h2.command.Parser.parse(Parser.java:278)
+	at org.h2.command.Parser.prepareCommand(Parser.java:243)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:172)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:160)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1391)
+	at org.h2.server.web.WebApp.query(WebApp.java:1064)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1026)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1013)
+	at org.h2.server.web.WebThread.process(WebThread.java:168)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+08-22 14:26:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#2" is not set; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:24)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:19)
+08-22 14:26:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#2" is not set; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:24)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:19)
+08-22 14:40:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#2" is not set; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:24)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:24)
+08-22 14:40:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#2" is not set; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:24)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:24)
+08-22 14:42:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#2" is not set; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:24)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:24)
+08-22 14:44:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#2" is not set; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:24)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:24)
+08-22 14:44:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#2" is not set; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:24)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:24)
+08-22 14:44:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#2" is not set; SQL statement:
+insert into Person (id, name, age) values (?, ?, ?) [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:78)
+	at org.h2.command.Command.executeUpdate(Command.java:254)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:158)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:144)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:24)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:24)
+08-22 14:45:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Invalid value "0" for parameter "parameterIndex" [90008-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.getInvalidValueException(DbException.java:227)
+	at org.h2.jdbc.JdbcPreparedStatement.setParameter(JdbcPreparedStatement.java:1383)
+	at org.h2.jdbc.JdbcPreparedStatement.setString(JdbcPreparedStatement.java:353)
+	at reflection.metamodel.orm.EntityManagerImpl$PreparedStatementWrapper.andParameters(EntityManagerImpl.java:71)
+	at reflection.metamodel.orm.EntityManagerImpl.persist(EntityManagerImpl.java:23)
+	at reflection.metamodel.WritingObjects.main(WritingObjects.java:24)
+08-22 16:56:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT ID, NAME, AGE FROM PERSON WHERE ID ?[*] "; SQL statement:
+select id, name, age from Person where id ? [42000-176]
+08-22 16:57:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+select id, name, age from Person where id = ? [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:109)
+	at reflection.metamodel.orm.EntityManagerImpl.find(EntityManagerImpl.java:30)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:14)
+08-22 16:58:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+select id, name, age from Person where id = ? [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:109)
+	at reflection.metamodel.orm.EntityManagerImpl.find(EntityManagerImpl.java:30)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:14)
+08-22 16:59:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+select id, name, age from Person where id = ? [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:109)
+	at reflection.metamodel.orm.EntityManagerImpl.find(EntityManagerImpl.java:30)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:14)
+08-22 17:05:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+select id, name, age from Person where id = ? [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:109)
+	at reflection.metamodel.orm.EntityManagerImpl.find(EntityManagerImpl.java:30)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:14)
+08-22 17:05:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+select id, name, age from Person where id = ? [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:109)
+	at reflection.metamodel.orm.EntityManagerImpl.find(EntityManagerImpl.java:30)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:14)
+08-22 17:07:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+select id, name, age from Person where id = ? [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:109)
+	at reflection.metamodel.orm.EntityManagerImpl.find(EntityManagerImpl.java:30)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:14)
+08-22 17:07:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Parameter "#1" is not set; SQL statement:
+select id, name, age from Person where id = ? [90012-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.Parameter.checkSet(Parameter.java:81)
+	at org.h2.command.Prepared.checkParameters(Prepared.java:165)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:90)
+	at org.h2.command.Command.executeQuery(Command.java:197)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:109)
+	at reflection.metamodel.orm.EntityManagerImpl.find(EntityManagerImpl.java:30)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:14)

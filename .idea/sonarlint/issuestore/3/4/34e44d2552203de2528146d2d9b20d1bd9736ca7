@@ -1,0 +1,29 @@
+
+N
+java:S1612",Replace this lambda with a method reference.(û§õ¡ÿÿÿÿÿ8–Ú¿ú¸.
+{
+java:S4276"YRefactor this code to use the more specialised Functional Interface 'IntFunction<String>'(¬°–ÿÿÿÿÿ8ÑØÎã¸.
+N
+java:S1612!",Replace this lambda with a method reference.(Ô×«’üÿÿÿÿ8ÍÁú¸.
+L
+java:S1611+"/Remove the parentheses around the "s" parameter(…ğş8É¦Òü¸.
+I
+java:S1612H",Replace this lambda with a method reference.(ğ“Çú8£±ıı¸.
+N
+java:S1612U",Replace this lambda with a method reference.(ÜßÀÓøÿÿÿÿ8Æ„™ÿ¸.
+I
+java:S1612W",Replace this lambda with a method reference.(ı­ä8è¢ ÿ¸.
+Q
+java:S1611-"/Remove the parentheses around the "s" parameter(ëãÈûÿÿÿÿ8¨äÒü¸.
+I
+java:S1612",Replace this lambda with a method reference.(Õòªş8–Ú¿ú¸.
+N
+java:S1612",Replace this lambda with a method reference.(­®éªüÿÿÿÿ8½È‰Ş¸.
+Q
+java:S1611"/Remove the parentheses around the "i" parameter(¬°–ÿÿÿÿÿ8ÑØÎã¸.
+N
+java:S1612",Replace this lambda with a method reference.(¬°–ÿÿÿÿÿ8Á·Åã¸.
+L
+java:S1611*"/Remove the parentheses around the "s" parameter(Òš˜†8É¦Òü¸.
+
+java:S1149h"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(µúĞòúÿÿÿÿ8şªÏ¹.

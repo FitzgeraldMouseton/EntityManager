@@ -1,0 +1,10 @@
+
+a
+java:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(Ğ˜ó8ï˜±÷º.
+a
+java:S2095"DUse try-with-resources or close this "Stream" in a "finally" clause.(§£„¶8ä…Òùº.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÔûÛùÿÿÿÿ
+F
+java:S1128")Remove this unused import 'java.net.URI'.(Ö¦¨°8©˜“÷º.
+a
+java:S2095 "DUse try-with-resources or close this "Stream" in a "finally" clause.(Ğµ±Œ8¥‰æùº.

@@ -1,0 +1,8 @@
+
+‰
+java:S1319$"mThe return type of this method should be an interface such as "Map" rather than the implementation "HashMap".(Ú…ÛY8Âëúº.
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(î¥ƒÕøÿÿÿÿ8§àßúº.
+j
+java:S2095*"MUse try-with-resources or close this "DirectoryStream" in a "finally" clause.(ô¡®´8™Îİúº.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÎÔûÛùÿÿÿÿ

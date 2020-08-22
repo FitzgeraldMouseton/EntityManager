@@ -1,0 +1,8 @@
+
+\
+java:S1128"ARemove this unused import 'java.nio.file.spi.FileSystemProvider'.(ÅóüÉ8©‹¥º.
+g
+java:S2095""JUse try-with-resources or close this "OutputStream" in a "finally" clause.(ÿŠù»8”ĞÀ¥º.
+p
+java:S2095#"NUse try-with-resources or close this "DataOutputStream" in a "finally" clause.(ÑìË³úÿÿÿÿ8ÛëÁ¥º.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(åÑÒŒ
