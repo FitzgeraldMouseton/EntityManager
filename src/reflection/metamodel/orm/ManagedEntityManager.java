@@ -1,5 +1,6 @@
 package reflection.metamodel.orm;
 
+import reflection.metamodel.annotations.Inject;
 import reflection.metamodel.util.ColumnField;
 import reflection.metamodel.util.Metamodel;
 
@@ -8,8 +9,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.sql.*;
 import java.util.concurrent.atomic.AtomicLong;
 
-public abstract class AbstractEntityManager<T> implements EntityManager<T> {
+public class ManagedEntityManager<T> implements EntityManager<T> {
 
+    @Inject
+    private Connection connection;
     // Все реализации jpa, включая Hibernate предоставляют генерацию id
     private final AtomicLong idGenerator = new AtomicLong(0L);
 
@@ -18,7 +21,7 @@ public abstract class AbstractEntityManager<T> implements EntityManager<T> {
 
         Metamodel metamodel = Metamodel.of(t.getClass());
         String sql = metamodel.buildInsertRequest();
-        try (PreparedStatement statement = prepareStatementWith(sql).andParameters(t);) {
+        try (PreparedStatement statement = prepareStatementWith(sql).andParameters(t)) {
             statement.executeUpdate();
         }
     }
@@ -28,19 +31,16 @@ public abstract class AbstractEntityManager<T> implements EntityManager<T> {
         Metamodel metamodel = Metamodel.of(clss);
         String sql = metamodel.buildSelectRequest();
         try (PreparedStatement statement = prepareStatementWith(sql).andPrimaryKey(primaryKey);
-            final ResultSet resultSet = statement.executeQuery();) {
+            final ResultSet resultSet = statement.executeQuery()) {
             return buildInstanceFrom(clss, resultSet);
         }
     }
 
     private PreparedStatementWrapper prepareStatementWith(String sql) throws SQLException {
-        Connection connection = buildConnection();
         final PreparedStatement preparedStatement = connection.prepareStatement(sql);
         return new PreparedStatementWrapper(preparedStatement);
 
     }
-
-    public abstract Connection buildConnection() throws SQLException;
 
     private T buildInstanceFrom(Class<T> clss, ResultSet resultSet) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException, SQLException {
         Metamodel metamodel = Metamodel.of(clss);
@@ -53,7 +53,7 @@ public abstract class AbstractEntityManager<T> implements EntityManager<T> {
         resultSet.next();
         if (primaryKeyType == long.class) {
             // Т.к. в ДБ id хранится в виде int - getInt
-            final long primaryKey = resultSet.getInt(primaryKeyName);
+            final long primaryKey = resultSet.getLong(primaryKeyName);
             primaryKeyField.setAccessible(true);
             primaryKeyField.set(t, primaryKey);
         }

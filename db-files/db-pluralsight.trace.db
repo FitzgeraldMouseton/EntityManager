@@ -284,3 +284,34 @@ select id, name, age from Person where id = ? [90012-176]
 	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:109)
 	at reflection.metamodel.orm.EntityManagerImpl.find(EntityManagerImpl.java:30)
 	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:14)
+08-25 13:24:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "K_ID" not found; SQL statement:
+select k_id, c_name, c_age from Person where k_id = ? [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:148)
+	at org.h2.command.dml.Select.prepare(Select.java:831)
+	at org.h2.command.Parser.prepareCommand(Parser.java:248)
+	at org.h2.engine.Session.prepareLocal(Session.java:442)
+	at org.h2.engine.Session.prepareCommand(Session.java:384)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1188)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:73)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:276)
+	at reflection.metamodel.orm.ManagedEntityManager.prepareStatementWith(ManagedEntityManager.java:40)
+	at reflection.metamodel.orm.ManagedEntityManager.find(ManagedEntityManager.java:33)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:18)
+08-25 13:29:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "id" not found [42122-176]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:344)
+	at org.h2.message.DbException.get(DbException.java:178)
+	at org.h2.message.DbException.get(DbException.java:154)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3122)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3210)
+	at org.h2.jdbc.JdbcResultSet.getInt(JdbcResultSet.java:340)
+	at reflection.metamodel.orm.ManagedEntityManager.buildInstanceFrom(ManagedEntityManager.java:56)
+	at reflection.metamodel.orm.ManagedEntityManager.find(ManagedEntityManager.java:35)
+	at reflection.metamodel.ReadingObjects.main(ReadingObjects.java:18)
+08-25 13:30:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "K_ID" not found; SQL statement:
+select * from k_id [42102-176]
